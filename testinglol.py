@@ -5,7 +5,7 @@ def gpt3(stext):
       engine="text-curie-001",
       prompt=stext,
       temperature=0.7,
-      max_tokens=5000,
+      max_tokens=2049,
       top_p=1,
       frequency_penalty=0,
       presence_penalty=0
