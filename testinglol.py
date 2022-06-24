@@ -14,7 +14,7 @@ def gpt3(stext):
     return content
 
 def generate(char1, char2, nsfw):
-    openai.api_key = "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"
+    openai.api_key = st.secrets["apikey"]
     print(str(nsfw))
     if str(nsfw) == "True":
         response = gpt3("Write a nsfw fanfiction for " + char1 + " and  " + char2)
