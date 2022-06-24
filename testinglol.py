@@ -5,7 +5,7 @@ def gpt3(stext):
       engine="text-curie-001",
       prompt=stext,
       temperature=0.7,
-      max_tokens=512,
+      max_tokens=2048,
       top_p=1,
       frequency_penalty=0,
       presence_penalty=0
@@ -17,9 +17,9 @@ def generate(char1, char2, nsfw):
     openai.api_key = st.secrets["apikey"]
     print(str(nsfw))
     if str(nsfw) == "True":
-        response = gpt3("Write a nsfw fanfiction for " + char1 + " and  " + char2)
+        response = gpt3("Write a nsfw fanfiction story for " + char1 + " and  " + char2)
     else:
-        response = gpt3("Write a fanfiction for " + char1 + " and  " + char2)
+        response = gpt3("Write a fanfiction story for " + char1 + " and  " + char2)
 
     return response
 
