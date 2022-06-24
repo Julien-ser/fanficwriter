@@ -24,8 +24,8 @@ def generate(char1, char2, nsfw):
     return response
 
 st.title("Fanfiction writer")
-text = st.text_area("Enter character 1: ", value='', height=50, max_chars=None, key=None)
-text2 = st.text_area("Enter character 2: ", value='', height=50, max_chars=None, key=None)
+text = st.text_area("Enter character 1: ", value='', height=10, max_chars=None, key=None)
+text2 = st.text_area("Enter character 2: ", value='', height=10, max_chars=None, key=None)
 agree = st.checkbox('NSFW?')
 
 if st.button('Generate fanfiction'):
